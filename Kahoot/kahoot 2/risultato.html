@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Kahoot</title>
+        <style type="text/css">
+            body{
+            background-image:URL("sfar1.png");
+            background-size:cover;
+            }
+            </style>
+            <script>
+                function contatot(){
+                    var c1 = localStorage.getItem("conta1");
+                    var c2 = localStorage.getItem("conta2");
+                    var c3 = localStorage.getItem("conta3");
+                    var c4 = localStorage.getItem("conta4");
+                    var c5 = localStorage.getItem("conta5");
+                    var c=0;
+                    c=c+c1+c2+c3+c4+c5;
+                    document.getElementById("stampa").innerHTML=c;
+                }
+            </script>
+    </head>
+    <body>
+        <center>
+            <h1 style="color: white;">Kahoot POKEMON </h1>
+            <p style="color: white;">Inserire nome:</p>
+            <input type="text" id="nome"><br><br>
+            <input type="submit" value="FINE" onclick="contatot()">
+            <p id="stampa" style="color: white;"></p>
+        </center>
+    </body>
+</html>

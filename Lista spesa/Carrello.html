@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Carrello</title>
+    <script>
+        var indice=-1
+        var n=localStorage.getItem("ind")
+        var v2=localStorage.getItem("ve")
+        var c=0
+        function f1(){
+             for(var i=0;i<n;i++){
+                if(i%2==0){
+                    var txt=""
+                    for(c;c<v2.length;c++){
+                        if(v2[c]==","){c++;break;}
+                        txt+=v2[c]
+                    }
+                    var y=document.createElement("input")
+                    y.setAttributeNode(document.createAttribute("disabled",""))
+                    y.value=txt
+                    document.getElementById("fff").appendChild(y)
+                }
+                else{
+                    var y=document.createElement("input")
+                    y.type="button"
+                    y.value="-"
+                    y.style="margin: 30px 0"
+                    var w=document.createAttribute("onclick")
+                    indice=indice+2
+                    w.value="remove("+indice+")"
+                    y.setAttributeNode(w)
+                    document.getElementById("fff").appendChild(y)
+                    var y2=document.createElement("br")
+                    document.getElementById("fff").appendChild(y2)
+                }
+            }
+            document.getElementById("stam").setAttributeNode(document.createAttribute("disabled",""))
+        }
+        function remove(i){
+            document.getElementById("fff").removeChild(document.getElementById("fff")[i])
+            document.getElementById("fff").removeChild(document.getElementById("fff")[i-1])
+            for(var j=i;j<document.getElementById("fff").length;j+=2){
+                var w=document.createAttribute("onclick")
+                w.value="remove("+j+")"
+                document.getElementById("fff")[j].setAttributeNode(w)
+            }
+        }
+    </script>
+</head>
+<body style="margin-top: 250px; background-image:url('sfspesa.webp');">
+    <center>
+        <div style="border: 1px solid black; width: 250px; background-color: white;">
+            <form id="fff">
+            </form>
+            <input type="button" value="Stampa" onclick="f1()" style="margin: 30px 0;"id="stam">
+        </div>
+    </center>
+</body>
+</html>

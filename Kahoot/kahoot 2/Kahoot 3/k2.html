@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Kahoot</title>
+        <style type="text/css">
+            body{
+            background-image:URL("squirtle.jpg");
+            background-size:cover;
+            }
+        </style>
+        <script>
+            function conta3(){
+                var c3=0;
+                if(domanda5=="metagross1.png")
+                c3++;
+                if(domanda6==9)
+                c3++;
+                localStorage.setItem("conta3", c3);
+            }
+        </script>    
+    </head>
+    <body>
+        <center>
+            <h1>Kahoot POKEMON</h1> <br><br>
+            <form action="k3.html" method="get">
+                <h2>5. Quale pokemon è di tipo psico?</h2>
+                <input type="radio" value="voladrac" name="domanda5"><img src="Gengar.png" width="100px">
+                <input type="radio" value="fuodrac" name="domanda5"><img src="Alcremie.webp" width="100px"><br>
+                <input type="radio" value="fuovola" name="domanda5"><img src="metagross1.png" width="100px">
+                <input type="radio" value="dracbuio" name="domanda5"><img src="clefable.webp" width="100px"><br><br>
+                <h2>6. Quante sono le generazioni?</h2>
+                <input type="radio" value="fanta" name="domanda6"> 8
+                <input type="radio" value="superchamp" name="domanda6">11<br>
+                <input type="radio" value="superfour" name="domanda6"> 9
+                <input type="radio" value="fantachamp" name="domanda6">10<br><br>
+                <input type="submit" value="AVANTI" onclick="conta3()">
+            </form>
+        </center>
+    </body>
+</html>

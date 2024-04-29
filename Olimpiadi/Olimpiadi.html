@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Olimpiadi</title>
+</head>
+<body style=" background-image: URL(spt.png);">
+    <center>
+        <h1 style="color: white; font-size: 100px;">Olimpiadi</h1>
+        <br><br><br><br><br><br>
+    <canvas id="mycanvas" width="430" height="195" style="background-color: white; border: 2px solid #d3d3d3;">
+        your browsers does not support the canvas element.
+    </canvas>
+    <script>
+        setInterval(disegna,100);
+        function disegna(){
+            var canvas=document.getElementById("mycanvas");
+            var ctx=canvas.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95,70,50,0,2*Math.PI, false);
+            ctx.strokeStyle="blue";
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(210,70,50,0,2*Math.PI, false);
+            ctx.strokeStyle="black";
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(325,70,50,0,2*Math.PI, false);
+            ctx.strokeStyle="red";
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(152,130,50,0,2*Math.PI, false);
+            ctx.strokeStyle="yellow";
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(267,130,50,0,2*Math.PI, false);
+            ctx.strokeStyle="green";
+            ctx.stroke();
+            
+            ctx.lineWidth = 6;
+
+            ctx.beginPath();
+            ctx.arc(95,70,50,1.9*Math.PI,2.1*Math.PI, false);
+            ctx.strokeStyle="blue";
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(210,70,50,0.9*Math.PI,2.1*Math.PI, false);
+            ctx.strokeStyle="black";
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(325,70,50,0.9*Math.PI,1.1*Math.PI, false);
+            ctx.strokeStyle="red";
+            ctx.stroke();
+        }
+    </script>
+    </center>
+</body>
+</html>
